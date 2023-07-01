@@ -1,0 +1,30 @@
+
+    LinkedList
+        > sequential collection of nodes attached one after other in unidirection.
+
+        > Node is structure where data and reference of next node.
+
+        > First node is known as root.
+        > Last/ Right most has next = null
+
+        > class Node {
+                int data;
+                Node next;
+                }
+            Node(int data){
+                this.data =data;
+                next = null;
+               }
+            }
+
+            Node t = root;
+            t = t.next;
+
+
+            Types of LinkedList
+                1> linear LinkedList
+                2> circular LikedLsit
+                3> Doubly L=
+
+
+

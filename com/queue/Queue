@@ -1,0 +1,27 @@
+
+ QUEUE
+        - FIFO
+        - Double ended
+        - four variations of queue
+                >Linear
+                >Circular
+                >Priority
+                >Double Ended  => Dynamic
+
+        -createQueue(size)
+
+
+
+        Circular Queue:
+
+
+
+
+
+Applications of Queue :
+
+        playlist
+        managing request in scheduling disk scheduling
+        handling hardware
+        handling website traffic
+        Routers and switches in networking

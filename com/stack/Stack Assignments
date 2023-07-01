@@ -1,0 +1,252 @@
+
+
+checking balance of () , {}, []
+
+reversing the String
+    pop LIFO and concat
+
+Dec to Binary
+    -until divisor get zero
+
+ Expression evaluation and conversion
+        prefix = +ab(s/w)  add(a,b)
+        postfix = ab+ (h/w)  calculator
+        infix = a+b
+
+    How to convert infix to prefix or postfix
+        - if all equal go left to right (precedence)
+          else first higher and then lower..
+        - in case of brackets solve from inner to outer..
+
+
+
+        precedence order
+
+        Operators	                        Symbols
+        Parenthesis	                        ( ), {}, [ ]
+        Exponents	                        ^
+        Multiplication and Division	        *, /
+        Addition and Subtraction	        + , -
+
+
+        prefix
+        a+b*c-d
+        > a + *bc -d
+        > a + B = +aB
+        > +a*bc -d
+        > A - d = -Ad
+        > -+a*bcd
+
+        postfix
+        a+b*c-d
+        > a + b * c - d
+        > a + bc - d
+        > a + B -d
+        > B - d = Bd -
+        > abc*+d-
+
+        =
+
+
+
+        (a+b) * (c-d)        (a+b) * (c-d)
+        > +ab * -cd
+        > *+ab-cd
+
+
+         (a+b) * (c-d)
+         > ab+ * cd-
+         > ab+cd -*
+
+
+
+         a*b/c-d*e
+         > *ab/c-d*e
+         > /*abc - d*e
+         > /*abc - *de
+         > -/*abc*de
+
+         a*b/c-d*e
+         > ab*c/ - de*
+         > ab*c/de*-
+
+
+
+
+
+
+
+         Laymans Algorithm
+
+         Algorithm
+
+         In-> Post
+
+         1> Accept infix and init stack
+         2> Read infix start to end
+         3> if read operand copy to Post
+            if read is '(' push on stack
+            if read is ')' pop everything from stack till '(' not removed and copy popped to post
+            if read is Operator push on stack if higher then operator on tos else
+            pop from state till condition is satisfied or stack becomes empty then push copy all
+            popped to post
+         4> when infix is over copy remaining of stack to post
+
+
+            a + b - c * d
+            >
+                post >
+
+                ab+cd
+
+                stack >
+
+                *
+                -
+
+
+                Conversion >
+                ab+cd*-
+
+
+
+
+
+
+            In -> Prefix
+
+            1> Accept infix and init stack
+            2> Read infix end to start
+            3>  if read operand copy to Prefix
+                           if read is ')' push on stack
+                           if read is '(' pop everything from stack till ')' not removed and copy popped to prefix
+                           if read is Operator push on stack if higher or equal  than operator at tos else
+                           pop from state till condition is satisfied or stack becomes empty then push copy all
+                           popped to prefix
+            4> when infix is over copy remaining of stack to prefix
+            5> Print in reverse
+
+
+
+            consider (a+b)*(c-d+e)
+
+            Pre
+            edc-+ba+*
+
+            rev
+            *+ab+-cde
+
+
+            stack
+
+            -       +
+            +       )
+            )       *
+
+
+
+            Evaluate ab+cd -*
+            where a=10, b=2, c=8, d=1
+            10,2,
+
+            for post start to end  /  prefix end to start
+
+            1> If operand push in stack
+            2> If operator two pops let
+               first pop :  right / left
+               and second pop: left / right
+               operate and push ans to stack
+
+
+
+
+            Evaluate *-+abcd
+            where a=10, b=5, c=1, d=3
+
+
+
+
+            ab+cde+f+g*-+
+
+            3,4,+,2,6,5,+,2,+,1,*,-,+
+
+
+            stack
+
+            +           3 + 4 = 7
+            4
+            3
+
+
+            +           6 + 5 = 11
+            5
+            6
+            2
+            7
+
+
+
+            +            11 + 2 = 13
+            2
+            11
+            2
+            7
+
+
+
+            *           13*1 = 13
+            1
+            13
+            2
+            7
+
+            -           2-13 = -11
+            13
+            2
+            7
+
+            +           7 +  (-11) = -4
+            -11
+            7
+
+
+
+
+            Evaluate  -,+,8,/,6,3,2
+
+
+            Stack
+
+
+            /       6/3 = 2
+            6
+            3
+            2
+
+
+
+
+
+            +       8+2 = 10
+            8
+            2
+            2
+
+
+
+            -       10 - 2 = 8
+            10
+            2
+
+
+    try it out >>     Evaluate  2,2,+,3,*,10,-
+                                -,*,+,2,2,3,10
+
+
+
+
+
+
+
+
+
